@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.AppBar?>
+<?import com.gluonhq.charm.glisten.control.BottomNavigation?>
+<?import com.gluonhq.charm.glisten.control.BottomNavigationButton?>
+<?import com.gluonhq.charm.glisten.control.Icon?>
+<?import com.gluonhq.charm.glisten.mvc.View?>
+<?import javafx.scene.layout.BorderPane?>
+
+<View fx:id="home" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gluonhq.hello.presenters.HomePresenter">
+   <bottom>
+      <BottomNavigation BorderPane.alignment="CENTER">
+          <actionItems>
+              <BottomNavigationButton fx:id="contactButton" selected="true" text="Contacts">
+                  <graphic>
+                      <Icon fx:id="contactsButton" content="RECENT_ACTORS" onMouseClicked="#onClickContactButton" />
+                  </graphic>
+              </BottomNavigationButton>
+              <BottomNavigationButton onMouseClicked="#onClickChatsButton" text="Home">
+                  <graphic>
+                      <Icon content="HOME" />
+                  </graphic>
+              </BottomNavigationButton>
+              <BottomNavigationButton onMouseClicked="#onClickCallsButton" text="Chuck">
+                  <graphic>
+                      <Icon id="CA" content="PEOPLE" />
+                  </graphic>
+              </BottomNavigationButton>
+          </actionItems>
+      </BottomNavigation>
+   </bottom>
+   <top>
+      <AppBar titleText="GoyoMobile" BorderPane.alignment="CENTER" />
+   </top>
+</View>
